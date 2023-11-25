@@ -2,7 +2,7 @@ export const PRODUCTS = [
   {
     id: '1',
     brand: 'Nike',
-    name: 'Nike Downs',
+    name: 'Nike Downs JRD',
     price: '199,00',
     thumb: require('../assets/tennis/nike_downshifter1_thumb.png'),
     image: require('../assets/tennis/nike_downshifter1.png'),
