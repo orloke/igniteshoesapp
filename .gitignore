@@ -1,4 +1,5 @@
 node_modules/
+appKey
 .expo/
 dist/
 npm-debug.*
