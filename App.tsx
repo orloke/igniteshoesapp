@@ -25,16 +25,13 @@ OneSignal.Notifications.requestPermission(true)
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold })
 
-  const [notification, setNotification] = useState<OSNotification>()
-
   TagUserInfoCreate()
 
   useEffect(() => {
     const unsubscribe = OneSignal.Notifications.addEventListener(
-      'foregroundWillDisplay',
+      'click',
       (event) => {
-        const response = event.getNotification()
-        setNotification(response)
+        console.log('Clicou na notificação', JSON.stringify(event, null, 2))
       }
     )
     return () => unsubscribe
@@ -50,14 +47,6 @@ export default function App() {
       <CartContextProvider>
         {fontsLoaded ? <Routes /> : <Loading />}
       </CartContextProvider>
-      {notification?.body && (
-        <Notification
-          title={notification?.title || ''}
-          onClose={() => {
-            setNotification(undefined)
-          }}
-        />
-      )}
     </NativeBaseProvider>
   )
 }
