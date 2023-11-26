@@ -31,7 +31,6 @@ export default function App() {
     const unsubscribe = OneSignal.Notifications.addEventListener(
       'click',
       (event) => {
-        console.log('Clicou na notificação', JSON.stringify(event, null, 2))
       }
     )
     return () => unsubscribe
