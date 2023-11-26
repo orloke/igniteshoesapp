@@ -8,12 +8,12 @@ type Props = {
 
 export function Notification({ title, onClose }: Props) {
   return (
-    <HStack 
-      w="full" 
-      p={4} 
+    <HStack
+      w="full"
+      p={4}
       pt={12}
-      justifyContent="space-between" 
-      alignItems="center" 
+      justifyContent="space-between"
+      alignItems="center"
       bgColor="gray.200"
       position="absolute"
       top={0}
@@ -24,11 +24,11 @@ export function Notification({ title, onClose }: Props) {
           {title}
         </Text>
 
-      <IconButton 
-        variant="unstyled" 
-        _focus={{ borderWidth: 0 }} 
-        icon={<CloseIcon size="3" />} 
-        _icon={{ color: "coolGray.600"}} 
+      <IconButton
+        variant="unstyled"
+        _focus={{ borderWidth: 0 }}
+        icon={<CloseIcon size="3" />}
+        _icon={{ color: "coolGray.600"}}
         color="black"
         onPress={onClose}
       />
